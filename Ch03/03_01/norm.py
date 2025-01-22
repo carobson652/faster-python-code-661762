@@ -15,6 +15,28 @@ def normalize(numbers):
         norm.append(num)
     return norm
 
+def normalize2(numbers):
+    """Normalize list of numbers"""
+    thr  = config.threshold
+    fact = config.factor
+    norm = []
+    for num in numbers:
+        if num > thr:
+            num /= fact
+        norm.append(num)
+    return norm
+
+def normalize3(numbers):
+    """Normalize list of numbers"""
+    thr    = config.threshold
+    fact   = config.factor
+    norm   = []
+    append = norm.append
+    for num in numbers:
+        if num > thr:
+            num /= fact
+        append(num)
+    return norm
 
 if __name__ == '__main__':
     import random
